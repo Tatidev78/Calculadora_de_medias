@@ -30,7 +30,7 @@ function adicionaLinha(){
     let linha = `<tr>`;
     linha += `<td> ${inputNomeAtividade.value}</td>`;
     linha += `<td> ${inputNotaAtividade.value}</td>`;
-    linha += `<td> ${inputNotaAtividade.value >= notaMinima? imgAprovado : imgReprovado}</td>`
+    linha += `<td> ${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`
     linha += `<tr>`;
 
     linhas += linha;
@@ -38,7 +38,7 @@ function adicionaLinha(){
     inputNomeAtividade.value ='';
     inputNotaAtividade.value ='';
 }
-
+}
 function atualizaTabela(){
     const corpoTabela = document.querySelector('tbody');
     corpoTabela.innerHTML = linhas;
@@ -47,7 +47,7 @@ function atualizaMediaFinal(){
     const mediaFinal = calculaMediaFinal();
 
     document.getElementById('media-final-valor').innerHTML = mediaFinal;
-    document.getElementById('media-final-resultado').innerHTML =mediaFinal >=notaMinima ? spanAprovado : spanReprovado;
+    document.getElementById('media-final-resultado').innerHTML =mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
    
 }
 function calculaMediaFinal(){
